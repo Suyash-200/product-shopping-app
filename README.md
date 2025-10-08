@@ -1,16 +1,46 @@
-# React + Vite
+# React Product Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Product Dashboard** built with **React**, **Redux Toolkit**, **Tailwind CSS**, and **React Router**, showcasing product listings, search & filter functionality, product details, and favorites management.  
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetches product data from [Fake Store API](https://fakestoreapi.com).  
+- **Product Listing Page** with responsive grid layout.  
+- **Search & Filter**:
+  - Debounced search by title.  
+  - Filter by category.  
+  - Sort by price (ascending/descending).  
+- **Product Detail Page** with full product info.  
+- **Favorites Management**:
+  - Add/remove favorites stored in Redux store.  
+  - Favorites count displayed in header.  
+- Fully **responsive** and **accessible** UI.  
+- **Unit & integration testing** with React Testing Library.  
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (Functional Components & Hooks)  
+- Redux Toolkit (Slices, Async Thunks, Selectors)  
+- React Router v6  
+- Tailwind CSS for modern styling  
+- React Icons  
+- Axios for API calls  
+- Jest & React Testing Library for testing  
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+├─ features/
+│ ├─ ProductList.jsx
+│ ├─ ProductCard.jsx
+│ ├─ ProductDetail.jsx
+│ ├─ FavoritesPage.jsx
+│ ├─ SearchBar.jsx
+│ └─ Filters.jsx
+├─ store/
+│ ├─ slices/
+│ │ ├─ productsSlice.js
+│ │ └─ favoritesSlice.js
+│ └─ store.js
+├─ App.jsx
+└─ index.js
